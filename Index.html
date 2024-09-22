@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Happy Birthday Mad Girl</title> 
+  <link rel="stylesheet" href="styles.css"> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script> 
+ <style type="text/css" id="dcoder_stylesheet">body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    background-color: #000;
+}
+
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fG5pZ2h0JTIwc2t5fGVufDB8fHx8MTY0NzY2MjY1Ng&ixlib=rb-1.2.1&q=80&w=1080');
+    background-size: cover;
+    z-index: -1;
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 20px 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.birthday-wish {
+    font-size: 1.5em;
+    margin: 15px 0;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding: 10px;
+}
+
+.gallery img {
+    width: 150px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+.book-quote {
+    font-size: 1.2em;
+    margin: 20px 0;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.quotes {
+    margin: 20px 0;
+    font-size: 1.2em;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+audio {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.snow {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+}</style></head> 
+ <body> 
+  <div class="background-animation"></div> 
+  <div class="container"> 
+   <h1>Wishing You a Magical Birthday!</h1> 
+   <p class="birthday-wish">On this special day, may you shine brighter than the stars and know that you are cherished beyond measure.</p> 
+   <div class="gallery"> 
+    <img src="https://i.postimg.cc/VN2qbr0y/IMG-20240503-232728-592.jpg" alt="Image 1"> 
+    <img src="https://i.postimg.cc/KY1V2ThC/IMG-20240416-WA0055.jpg" alt="Image 2"> 
+    <img src="https://i.postimg.cc/J7Fs7VXg/IMG-20240503-232721-912.jpg" alt="Image 3"> 
+    <img src="https://i.postimg.cc/zGrtQQxb/IMG-20240214-195612-872.jpg" alt="Image 4"> 
+    <img src="https://i.postimg.cc/W3gSS606/IMG-20240408-WA0024.jpg" alt="Image 5"> 
+    <img src="https://i.postimg.cc/63c498Kx/IMG-20240503-232729-149.jpg" alt="Image 6"> 
+   </div> 
+   <p class="book-quote">"In every moment, remember that you are stronger than you believe, and the journey ahead is filled with endless possibilities. Embrace it fully."</p> 
+   <div class="quotes"> 
+    <p>"In the quiet moments, remember that your strength isn't in being perfect, but in being real, and that's where your true beauty shines."</p> 
+    <p>"You are worth every bit of love!"</p> 
+    <p>"Always remember to love yourself!"</p> 
+   </div> 
+   
+   <!-- Vocaroo Embed -->
+   <div>
+     <iframe width="300" height="60" src="https://vocaroo.com/embed/1heed7EdmL5M?autoplay=0" frameborder="0" allow="autoplay"></iframe>
+     <br>
+     <a href="https://voca.ro/1heed7EdmL5M" title="Vocaroo Voice Recorder" target="_blank">View on Vocaroo &gt;&gt;</a>
+   </div>
+   
+  </div> 
+  <div id="snow-container"></div> 
+  <script src="script.js"></script> 
+ 
+<script type="text/javascript" id="dcoder_script">function createSnowflake() {
+    const snowflake = document.createElement('div');
+    snowflake.classList.add('snow');
+    snowflake.style.left = Math.random() * window.innerWidth + 'px';
+    snowflake.style.opacity = Math.random();
+    document.getElementById('snow-container').appendChild(snowflake);
+
+    anime({
+        targets: snowflake,
+        translateY: [0, window.innerHeight + 100],
+        duration: Math.random() * 3000 + 3000,
+        easing: 'linear',
+        complete: () => {
+            snowflake.remove();
+        }
+    });
+}
+
+setInterval(createSnowflake, 300);</script></body></html>
